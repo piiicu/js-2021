@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+div {
+    width: 40em;
+    height: 15em;
+    background-color: blue;
+}
+@keyframes disappear {
+    to { 
+        background-color: #fff;
+    }
+}
+.disappear {
+    animation: disappear 2s backwards;
+}
