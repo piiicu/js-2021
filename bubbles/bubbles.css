@@ -1,21 +1,46 @@
 body {
     background-color: rgb(237, 213, 133);
     height: 100vh;
+    overflow: hidden;
 }
 @keyframes bubble {
     to {
         transform: translateY(-5vh) scale(1.9);
     }
 }
+@keyframes float {
+    25% {
+        transform: rotate(3deg) translate(0.5em, 0.5em);
+    }
+    50% {
+        transform: rotate(0deg) translate(0em, 1em);
+    }
+    75% {
+        transform: rotate(-3deg) translate(-0.5em, 0.5em);
+    }
+}
 .bubble {
-    height: 0.5em;
-    width: 0.5em;
     position: absolute;
     border-radius: 50px;
     border-color: blue;
     border-width: 1px;
     border-style: solid;
-    transform: translateY(100vh);
+    transform: translateY(105vh);
     animation-name: bubble;
     animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+img{
+    /* pt a o repozitiona */
+    display: block;
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    height: 60vh;
+    z-index: 1;
+    animation-name: float;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
 }

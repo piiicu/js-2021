@@ -9,3 +9,7 @@ document.querySelector('div')
             document.querySelector("div")
                     .classList.remove("disappear")
         })
+
+// arrow function: inlocuirea denumirii "function" cu sageata "=>"
+        document.querySelector('div')
+        .addEventListener("click", () => document.querySelector('div').classList.add("disappear"))
